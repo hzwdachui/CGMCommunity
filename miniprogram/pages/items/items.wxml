@@ -1,0 +1,4 @@
+<!--miniprogram/pages/items/items.wxml-->
+<view>
+  <itemList></itemList>
+</view>

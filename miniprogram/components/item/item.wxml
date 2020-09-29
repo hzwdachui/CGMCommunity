@@ -1,0 +1,14 @@
+<!--components/item/item.wxml-->
+<view class="item">
+  <h1>商品1</h1>
+  <view>
+    <image src="https://img.php.cn//upload/image/653/218/736/1490085522188098.png" />
+  </view>
+  <view>
+    <text>成分</text>
+  </view>
+  <view>
+    <text>讨论区</text>
+  </view>
+
+</view>

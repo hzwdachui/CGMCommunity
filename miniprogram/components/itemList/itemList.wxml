@@ -1,0 +1,13 @@
+<!--components/itemList.wxml-->
+<view>
+  <view class="page__bd">
+    <mp-searchbar bindselectresult="selectResult" search="{{search}}"></mp-searchbar>
+  </view>
+  
+  <mp-cells wx:for="{{itemList}}"> 
+    <mp-cell link url="/" value="{{item.item_name}}">
+      <image slot="icon" src="{{item.img_src}}" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+      <!-- <image src="{{item.img_src}}"/> -->
+    </mp-cell>
+  </mp-cells>
+</view>

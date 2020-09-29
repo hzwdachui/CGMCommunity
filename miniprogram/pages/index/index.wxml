@@ -55,5 +55,10 @@
     </navigator>
   </view>
 
-
+  <!-- 商品页面 -->
+  <view class="uploader">
+    <navigator url="../items/items" open-type="navigate" class="uploader-text">
+      <text>商品页面</text>
+    </navigator>
+  </view>
 </view>

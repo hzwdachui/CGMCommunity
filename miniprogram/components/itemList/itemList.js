@@ -1,7 +1,7 @@
 // components/itemList.js
 
 // get items from database
-const DB = wx.cloud.database()
+const DB = wx.cloud.database();
 
 Component({
   // 组件生命周期

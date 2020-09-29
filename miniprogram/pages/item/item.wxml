@@ -1,0 +1,4 @@
+<!--miniprogram/pages/item/item.wxml-->
+<view>
+  <item item_id="{{item_id}}"></item>
+</view>

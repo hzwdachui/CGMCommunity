@@ -1,14 +1,19 @@
 <!--components/item/item.wxml-->
 <view class="item">
-  <h1>商品1</h1>
   <view>
-    <image src="https://img.php.cn//upload/image/653/218/736/1490085522188098.png" />
+    <h1>{{item_name}}</h1>
+  <view>
+    <image src="{{img_src}}" />
+  </view>
   </view>
   <view>
     <text>成分</text>
+    <text>写成表格的形式，数据库此项存数组</text>
+    <ingredient item_id="{{item_id}}"></ingredient>
   </view>
   <view>
     <text>讨论区</text>
+    <text>另存一张表</text>
   </view>
 
 </view>

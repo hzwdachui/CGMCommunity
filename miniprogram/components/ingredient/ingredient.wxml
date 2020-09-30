@@ -1,7 +1,7 @@
 <!--components/ingredient/ingredient.wxml-->
 <view>
-  <mp-cells ext-class="my-cells">
-    <mp-cell value="成分1" footer="成分1"></mp-cell>
+  <mp-cells ext-class="my-cells" wx:for="{{ingredients}}">
+    <mp-cell value="{{ingredients.ingredient_name}}" footer="成分1"></mp-cell>
     <mp-cell value="成分2" footer="成分2"></mp-cell>
     <mp-cell value="成分3" footer="成分3"></mp-cell>
   </mp-cells>

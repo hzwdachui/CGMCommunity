@@ -2,17 +2,19 @@
 <view class="item">
   <view>
     <h1>{{item_name}}</h1>
-  <view>
-    <image src="{{img_src}}" />
+    <view>
+      <image src="{{img_src}}" />
+    </view>
   </view>
-  </view>
   <view>
-    <text>成分</text>
+    <h1>成分</h1>
     <text>写成表格的形式，数据库此项存数组</text>
-    <ingredient item_id="{{item_id}}"></ingredient>
+    <mp-cells ext-class="my-cells" wx:for="{{ingredients}}">
+      <mp-cell value="{{item.name}}" footer="{{item.category}}"></mp-cell>
+    </mp-cells>
   </view>
   <view>
-    <text>讨论区</text>
+    <h1>讨论区</h1>
     <text>另存一张表</text>
   </view>
 

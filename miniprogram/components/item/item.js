@@ -40,7 +40,7 @@ Component({
       const { data: initData } = await DB.collection("items").doc(this.properties.item_id).get();
       console.log('[DEBUG] init query ', initData)
       this.setData({
-        item_id: initData.item_id,
+        item_id: initData._id,
         img_src: initData.img_src,
         item_name: initData.item_name,
         ingredients: initData.ingredients

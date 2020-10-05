@@ -8,14 +8,13 @@
   </view>
   <view>
     <h1>成分</h1>
-    <text>写成表格的形式，数据库此项存数组</text>
     <mp-cells ext-class="my-cells" wx:for="{{ingredients}}">
       <mp-cell value="{{item.name}}" footer="{{item.category}}"></mp-cell>
     </mp-cells>
   </view>
   <view>
     <h1>讨论区</h1>
-    <text>另存一张表</text>
+    <comments item_id="{{item_id}}"></comments>
   </view>
 
 </view>

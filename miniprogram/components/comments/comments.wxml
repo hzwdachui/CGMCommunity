@@ -2,7 +2,7 @@
 <view>
   <view>
     <mp-cells ext-class="my-cells" wx:for="{{comments_list}}">
-      <mp-cell value="{{item}}"></mp-cell>
+      <mp-cell value="{{item.comment}}"></mp-cell>
     </mp-cells>
   </view> 
   <view>
@@ -16,14 +16,6 @@
           </view>
         </view>
       </view>
-      <view class="weui-cells__title">文本域</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell">
-                <view class="weui-cell__bd">
-                    <textarea class="weui-textarea" placeholder="请输入文本" style="height: 3.3em" />
-                </view>
-            </view>
-        </view>
       <view class="weui-btn-area">
         <button class="weui-btn" type="primary" formType="submit">确定</button>
       </view>

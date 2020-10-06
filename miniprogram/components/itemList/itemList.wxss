@@ -1,1 +1,2 @@
 /* components/itemList.wxss */
+@import '/style/weui.wxss';

@@ -1,5 +1,6 @@
 // components/comments/comments.js
 
+const app = getApp();
 // get items from database
 const DB = wx.cloud.database();
 
@@ -25,7 +26,7 @@ Component({
   data: {
     comment_id: "",
     item_id: "",
-    comments_list: [],
+    comments_list: [],  // element: {open_id, new_comment}
     formData: {
       new_comment: ""
     }
@@ -57,7 +58,10 @@ Component({
       });
       console.log('[DEBUG]绑定数据 new_comment:', this.data.formData.new_comment);
       console.log('[DEBUG]comment id: ', this.data.comment_id);
-      this.data.comments_list.push(this.data.formData.new_comment);
+      console.log("[DEBUG]: user openid is: "+ app.globalData.openid);
+      this.data.comments_list.push({
+        open_id: app.globalData.openid, comment: this.data.formData.new_comment
+      });
       DB.collection("comments")
         .doc(that.data.comment_id)
         .update({

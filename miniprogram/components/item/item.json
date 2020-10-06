@@ -1,7 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "ingredient": "/components/ingredient/ingredient",
     "comments": "/components/comments/comments",
     "mp-cells": "/miniprogram_npm/weui-miniprogram/cells/cells",
     "mp-cell": "/miniprogram_npm/weui-miniprogram/cell/cell",

@@ -1,2 +1,6 @@
 /* components/comments/comments.wxss */
 @import '/style/weui.wxss';
+
+.comment-index {
+  font-size: x-small;
+}

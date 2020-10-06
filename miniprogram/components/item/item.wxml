@@ -1,20 +1,26 @@
 <!--components/item/item.wxml-->
 <view class="item">
   <view>
-    <h1>{{item_name}}</h1>
+    <view class="weui-article">
+      <view class="weui-article__h1">产品名称</view>
+      <view class="weui-article__h2">{{item_name}}</view>
+    </view>
     <view>
       <image src="{{img_src}}" />
     </view>
   </view>
   <view>
-    <h1>成分</h1>
-    <mp-cells ext-class="my-cells" wx:for="{{ingredients}}">
-      <mp-cell value="{{item.name}}" footer="{{item.category}}"></mp-cell>
-    </mp-cells>
+    <view class="weui-article">
+      <view class="weui-article__h1">成分</view>
+      <mp-cells ext-class="my-cells" wx:for="{{ingredients}}">
+        <mp-cell value="{{item.name}}" footer="{{item.category}}"></mp-cell>
+      </mp-cells>
+    </view>
   </view>
   <view>
-    <h1>讨论区</h1>
-    <comments item_id="{{item_id}}"></comments>
+    <view class="weui-article">
+      <view class="weui-article__h1">讨论区</view>
+      <comments item_id="{{item_id}}"></comments>
+    </view>
   </view>
-
 </view>

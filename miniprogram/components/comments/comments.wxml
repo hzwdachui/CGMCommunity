@@ -2,24 +2,25 @@
 <view>
   <view>
     <mp-cells ext-class="my-cells" wx:for="{{comments_list}}">
+      <view class="comment-index">{{index+1}}楼</view>
       <mp-cell value="{{item.comment}}"></mp-cell>
     </mp-cells>
-  </view> 
+  </view>
   <view>
-    <text>todo: refactor for better components name</text>
-    <view class="weui-cells__title">评论</view>
+    <view class="weui-cells__title">添加评论</view>
     <form catchsubmit="formSubmit">
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell">
           <view class="weui-cell__bd">
-            <textarea class="weui-textarea" value="{{formData.new_comment}}" placeholder="请输入评论" name="new_comment" style="height: 3.3em" />
-          </view>
+            <textarea class="weui-textarea" value="{{formData.new_comment}}" placeholder="请输入评论" name="new_comment"
+              style="height: 4.3em" />
+            </view>
         </view>
-      </view>
-      <view class="weui-btn-area">
+        <view class="weui-btn-area">
         <button class="weui-btn" type="primary" formType="submit">确定</button>
       </view>
+      </view>
+
     </form>
-    <text>todo: 评论区安全性问题</text>
   </view>
 </view>

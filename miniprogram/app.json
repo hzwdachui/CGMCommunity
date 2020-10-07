@@ -15,8 +15,7 @@
     "pages/im/room/room",
     "pages/items/items",
     "pages/item/item",
-    "weui-wxss-master/dist/example/index",
-    "weui-wxss-master/dist/example/article/article"
+    "pages/management/management"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

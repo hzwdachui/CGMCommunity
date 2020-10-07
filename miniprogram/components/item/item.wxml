@@ -4,11 +4,12 @@
     <view class="weui-article">
       <view class="weui-article__h1">产品名称</view>
       <view class="weui-article__h2">{{item_name}}</view>
-    </view>
-    <view>
-      <image src="{{img_src}}" />
+      <view>
+        <image src="{{img_src}}" />
+      </view>
     </view>
   </view>
+
   <view>
     <view class="weui-article">
       <view class="weui-article__h1">成分</view>
@@ -17,6 +18,7 @@
       </mp-cells>
     </view>
   </view>
+
   <view>
     <view class="weui-article">
       <view class="weui-article__h1">讨论区</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "management": "/components/management/management"
+  },
+  "navigationBarTitleText": "管理端"
+}

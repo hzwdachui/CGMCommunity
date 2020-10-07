@@ -8,6 +8,9 @@
     <view class="userinfo-nickname-wrapper" wx:if="{{logged}}">
       <view class="userinfo-nickname">{{userInfo.nickName}}</view>
     </view>
+    <view class="userinfo-nickname-wrapper" wx:else>
+      <view class="userinfo-nickname">请点击头像登陆</view>
+    </view>
     <!-- <view class="userinfo-nickname-wrapper">
       <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
     </view> -->
@@ -62,7 +65,7 @@
 
   <!-- 管理端 -->
   <view class="uploader" wx:if="{{logged}}">
-    <navigator open-type="navigate" class="uploader-text">
+    <navigator url="../management/management" open-type="navigate" class="uploader-text">
       <text>管理端（待开发）</text>
     </navigator>
   </view>

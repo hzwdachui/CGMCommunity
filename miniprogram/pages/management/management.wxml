@@ -1,0 +1,4 @@
+<!--miniprogram/pages/management/management.wxml-->
+<view>
+  <management></management>
+</view>

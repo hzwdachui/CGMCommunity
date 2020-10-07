@@ -1,0 +1,33 @@
+<!--components/management/management.wxml-->
+<view>
+  <view class="weui-article">
+    <view class="weui-article__h1">添加产品信息</view>
+  </view>
+
+  <form catchsubmit="formSubmit">
+    <mp-cells title="基本信息">
+      <mp-cell>
+        <input class="weui-input" placeholder="请输入产品名称" name="item_name"/>
+      </mp-cell>
+      <mp-cell>
+        <input class="weui-input" placeholder="请输入图片链接" name="img_src"/>
+      </mp-cell>
+    </mp-cells>
+
+    <mp-cells title="成分信息{{index}}" wx:for="{{ingredients_list}}">
+      <mp-cell>
+        <input class="weui-input" placeholder="成分" />
+      </mp-cell>
+      <mp-cell>
+        <input class="weui-input" placeholder="是否符合CGM" />
+      </mp-cell>
+    </mp-cells>
+    <view class="weui-btn-area">
+      <button bindtap="handleTapAddBtn" class="mini-btn" type="primary" size="mini">添加成分信息</button>
+    </view>
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="primary" formType="submit">提交</button>
+    </view>
+
+  </form>
+</view>

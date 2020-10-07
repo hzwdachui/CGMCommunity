@@ -16,10 +16,11 @@
 
     <mp-cells title="成分信息{{index}}" wx:for="{{ingredients_list}}">
       <mp-cell>
-        <input class="weui-input" placeholder="成分" />
+        <!--通过事件实现双向绑定-->
+        <input class="weui-input" placeholder="成分" value="" name="ingredient[{{index}}].name" bindinput="handleNameInput" data-model="{{index}}"/>
       </mp-cell>
       <mp-cell>
-        <input class="weui-input" placeholder="是否符合CGM" />
+        <input class="weui-input" placeholder="是否符合CGM" name="ingredient[{{index}}].category" bindinput="handleCategoryInput" data-model="{{index}}"/>
       </mp-cell>
     </mp-cells>
     <view class="weui-btn-area">

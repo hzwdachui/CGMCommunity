@@ -1,4 +1,5 @@
 // components/management/management.js
+const DB = wx.cloud.database();
 Component({
   /**
    * 组件的属性列表
@@ -11,7 +12,8 @@ Component({
    * 组件的初始数据
    */
   data: {
-    formData: {},
+    item_name: "",
+    img_src: "",
     ingredients_list: []
   },
 
@@ -21,14 +23,43 @@ Component({
   methods: {
     handleTapAddBtn() {
       console.log("[DEBUG] 添加成分栏目");
-      this.data.ingredients_list.push({});
+      this.data.ingredients_list.push({name: ""});
       this.setData({
         ingredients_list: this.data.ingredients_list
       });
     },
     formSubmit(e) {
+      let that = this;
       console.log("[DEBUG]: submit form");
       console.log(e.detail.value);
+      let data = e.detail.value;
+      // 表单成分数据转化为列表
+      this.setData({
+        item_name: data.item_name,
+        img_src: data.img_src,
+        ingredients_list: this.data.ingredients_list
+      });
+      console.log("[DEBUG] data: ");
+      console.log(this.data);
+      // 存数据库
+      DB.collection("items")
+      .add({
+        // data 传入需要局部更新的数据
+        data: {
+          item_name: that.data.item_name,
+          img_src: that.data.img_src,
+          ingredients: that.data.ingredients_list
+        },
+        success: function (res) {
+          console.log(res.data)
+        }
+      });
+    },
+    handleNameInput: function(e) {
+      this.data.ingredients_list[e.currentTarget.dataset.model].name = e.detail.value;
+    },
+    handleCategoryInput: function(e) {
+      this.data.ingredients_list[e.currentTarget.dataset.model].category = e.detail.value;
     }
   }
 })

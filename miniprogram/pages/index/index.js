@@ -1,5 +1,6 @@
 //index.js
 const app = getApp()
+const DB = wx.cloud.database();
 
 Page({
   data: {
@@ -7,7 +8,8 @@ Page({
     userInfo: {},
     logged: false,
     takeSession: false,
-    requestResult: ''
+    requestResult: '',
+    isAdmin: false
   },
 
   onLoad: function () {
@@ -57,8 +59,26 @@ Page({
       name: 'login',
       data: {},
       success: res => {
-        console.log('[云函数] [login] user openid: ', res.result.openid)
-        app.globalData.openid = res.result.openid
+        console.log('[云函数] [login] user openid: ', res.result.openid);
+        app.globalData.openid = res.result.openid;
+
+        // 通过 open_id 判断权限
+        let that = this;
+        DB.collection('admin_user').get({
+          success: function(res) {
+            // res.data 是一个包含集合中有权限访问的所有记录的数据，不超过 20 条
+            console.log('[DEBUG] admin users: ');
+            console.log(res.data);
+            for (let i in res.data) {
+              if (app.globalData.openid === res.data[i].admin_open_id) {
+                console.log('[DEBUG] is admin');
+                that.setData({
+                  isAdmin: true
+                });
+              }
+            }
+          }
+        });
         // wx.navigateTo({
         //   url: '../userConsole/userConsole',
         // })

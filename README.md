@@ -1,12 +1,24 @@
-# 云开发 quickstart
+# 功能点
+v0.0.3
+- 管理端
+  - 添加item界面（name，img，ingredients，comments）
+  - 查看评论
+- 展示页
+  - 所有商品 itemList
+  - 点击某个商品展示细节（name，img，ingredients，comments），同时能添加comment
 
-这是云开发的快速启动指引，其中演示了如何上手使用云开发的三大基础能力：
+# TODO
+v0.0.4
+- 提交成功弹出banner
+- 商品展示页面搜索
+  - 目前先前端搜索，如果复杂了再改后端搜索
+- 等待response时候展示loading
+- 反馈功能，管理端查看反馈
 
-- 数据库：一个既可在小程序前端操作，也能在云函数中读写的 JSON 文档型数据库
-- 文件存储：在小程序前端直接上传/下载云端文件，在云开发控制台可视化管理
-- 云函数：在云端运行的代码，微信私有协议天然鉴权，开发者只需编写业务逻辑代码
+v0.0.5
+代码重构
 
-## 参考文档
+# DONE
+20201008: v0.0.3
 
-- [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 

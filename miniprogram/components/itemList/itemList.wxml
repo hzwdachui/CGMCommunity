@@ -1,7 +1,7 @@
 <!--components/itemList.wxml-->
 <view>
   <view class="page__bd">
-    <mp-searchbar search="{{search}}"></mp-searchbar>
+    <mp-searchbar search="{{search}}" bindclear="clearHandler" cancel="{{false}}"></mp-searchbar>
   </view>
   
   <mp-cells wx:for="{{showItemList}}"> 

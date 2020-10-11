@@ -56,6 +56,9 @@ Component({
           })
         });
       })
+    },
+    clearHandler(){
+      this.search("");
     }
   }
 })

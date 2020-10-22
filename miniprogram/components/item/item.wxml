@@ -9,6 +9,14 @@
       </view>
     </view>
   </view>
+  <view>
+    <view class="weui-article">
+      <view class="weui-article__h1">夏洛特说</view>
+      <view class="weui-article">
+      {{admin_comment}}
+      </view>
+    </view>
+  </view>
 
   <view>
     <view class="weui-article">

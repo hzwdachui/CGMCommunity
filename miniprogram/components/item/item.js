@@ -43,7 +43,8 @@ Component({
         item_id: initData._id,
         img_src: initData.img_src,
         item_name: initData.item_name,
-        ingredients: initData.ingredients
+        ingredients: initData.ingredients,
+        admin_comment: initData.admin_comment
       });
       console.log('[DEBUG] init data ', this.data);
     }

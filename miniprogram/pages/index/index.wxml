@@ -57,7 +57,9 @@
   </view> -->
 
   <!-- 商品页面 -->
-  <view class="uploader" wx:if="{{logged}}">
+  <!-- 不得强制要求用户登陆，所以仅管理端要求登陆就好了 -->
+  <!-- <view class="uploader" wx:if="{{logged}}"> -->
+    <view class="uploader">
     <navigator url="../items/items" open-type="navigate" class="uploader-text">
       <text>商品页面</text>
     </navigator>
@@ -71,7 +73,7 @@
   </view>
 
   <view class="weui-footer weui-footer_fixed-bottom">
-    <view class="weui-footer__text">bete v0.0.3</view>
+    <view class="weui-footer__text">beta v1.0.1</view>
     <view class="weui-footer__text">Copyright © 夏洛特的自然卷星球</view>
   </view>
 

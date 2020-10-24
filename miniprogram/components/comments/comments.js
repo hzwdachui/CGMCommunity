@@ -29,7 +29,8 @@ Component({
     comments_list: [],  // element: {open_id, new_comment}
     formData: {
       new_comment: ""
-    }
+    },
+    error: ""
   },
 
   /**
@@ -51,6 +52,16 @@ Component({
       console.log('[DEBUG] comments init data ', this.data);
     },
     formSubmit(e) {
+      // let that = this;
+      if (app.globalData.openid) {
+        this._comment(e);
+      } else {
+        this.setData({
+          error: "评论功能需要登陆后再使用哦~"
+        });
+      }
+    },
+    _comment(e) {
       let that = this;
       console.log('form发生了submit事件，携带数据为：', e.detail.value);
       this.setData({
@@ -58,7 +69,7 @@ Component({
       });
       console.log('[DEBUG]绑定数据 new_comment:', this.data.formData.new_comment);
       console.log('[DEBUG]comment id: ', this.data.comment_id);
-      console.log("[DEBUG]: user openid is: "+ app.globalData.openid);
+      console.log("[DEBUG]: user openid is: " + app.globalData.openid);
       this.data.comments_list.push({
         open_id: app.globalData.openid, comment: this.data.formData.new_comment
       });
@@ -73,14 +84,14 @@ Component({
             console.log(res.data)
           }
         });
-        setTimeout(() => {
-          // 设置500ms，避免数据库还没更新完，查询到旧数据
-          this.getComments();
-          console.log("[DEBUG] update comment list")
-        },500);
-        this.setData({
-          formData: {new_comment: ""}
-        });
+      setTimeout(() => {
+        // 设置500ms，避免数据库还没更新完，查询到旧数据
+        this.getComments();
+        console.log("[DEBUG] update comment list")
+      }, 500);
+      this.setData({
+        formData: { new_comment: "" }
+      });
     }
   }
 })

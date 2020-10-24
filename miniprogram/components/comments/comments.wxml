@@ -1,5 +1,6 @@
 <!--components/comments/comments.wxml-->
 <view>
+  <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
   <view>
     <mp-cells ext-class="my-cells" wx:for="{{comments_list}}">
       <view class="comment-index">{{index+1}}楼</view>

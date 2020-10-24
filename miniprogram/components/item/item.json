@@ -4,6 +4,7 @@
     "comments": "/components/comments/comments",
     "mp-cells": "/miniprogram_npm/weui-miniprogram/cells/cells",
     "mp-cell": "/miniprogram_npm/weui-miniprogram/cell/cell",
-    "mp-slideview": "/miniprogram_npm/weui-miniprogram/slideview/slideview"
+    "mp-slideview": "/miniprogram_npm/weui-miniprogram/slideview/slideview",
+    "mp-toptips": "/miniprogram_npm/weui-miniprogram/toptips/toptips"
   }
 }

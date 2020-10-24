@@ -67,11 +67,9 @@ Page({
         DB.collection('admin_user').get({
           success: function(res) {
             // res.data 是一个包含集合中有权限访问的所有记录的数据，不超过 20 条
-            console.log('[DEBUG] admin users: ');
-            console.log(res.data);
             for (let i in res.data) {
               if (app.globalData.openid === res.data[i].admin_open_id) {
-                console.log('[DEBUG] is admin');
+                console.log('[DEBUG] user is admin');
                 that.setData({
                   isAdmin: true
                 });
@@ -79,15 +77,9 @@ Page({
             }
           }
         });
-        // wx.navigateTo({
-        //   url: '../userConsole/userConsole',
-        // })
       },
       fail: err => {
         console.error('[云函数] [login] 调用失败', err)
-        // wx.navigateTo({
-        //   url: '../deployFunctions/deployFunctions',
-        // })
       }
     })
   },

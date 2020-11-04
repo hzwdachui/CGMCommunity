@@ -24,7 +24,6 @@ Component({
     item_id: "",
     img_src: "",
     item_name: "",
-    // ingredients: [{name: "test_name1", category: "test_cat1"}]
     ingredients: []
   },
 
@@ -33,12 +32,7 @@ Component({
    */
   methods: {
     async getItem() {
-      let that = this;
-      // console.log("[DEBUG] that.properties.item_id: ");
-      console.log(that.properties);
-      console.log("[DEBUG] that.properties.item_id: " + that.properties.item_id)
       const { data: initData } = await DB.collection("items").doc(this.properties.item_id).get();
-      console.log('[DEBUG] init query ', initData)
       this.setData({
         item_id: initData._id,
         img_src: initData.img_src,
@@ -46,7 +40,6 @@ Component({
         ingredients: initData.ingredients,
         admin_comment: initData.admin_comment
       });
-      console.log('[DEBUG] init data ', this.data);
     }
   }
 })

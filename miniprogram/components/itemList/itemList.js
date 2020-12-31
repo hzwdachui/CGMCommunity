@@ -2,7 +2,7 @@
 
 // get items from database
 const DB = wx.cloud.database();
-const MAX_LIMIT = 10;
+const MAX_LIMIT = 20;
 
 Component({
   // 组件生命周期
@@ -20,7 +20,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    editable: { 
+      type: String,
+      value: "false"
+    },
   },
 
   /**

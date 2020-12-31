@@ -4,7 +4,7 @@
     <view class="weui-article">
       <view class="weui-article__h1">产品名称</view>
       <view class="weui-article__h2">{{item_name}}</view>
-      <view>
+      <view class="img-center">
         <image src="{{img_src}}" mode="aspectFit"/>
       </view>
     </view>

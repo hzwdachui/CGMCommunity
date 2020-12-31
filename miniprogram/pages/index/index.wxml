@@ -67,13 +67,13 @@
 
   <!-- 管理端 -->
   <view class="uploader" wx:if="{{logged && isAdmin}}">
-    <navigator url="../management/management" open-type="navigate" class="uploader-text">
+    <navigator url="../managementHome/managementHome" open-type="navigate" class="uploader-text">
       <text>管理端</text>
     </navigator>
   </view>
 
   <view class="weui-footer weui-footer_fixed-bottom">
-    <view class="weui-footer__text">beta v1.0.1</view>
+    <view class="weui-footer__text">beta v1.0.3</view>
     <view class="weui-footer__text">Copyright © 夏洛特的自然卷星球</view>
   </view>
 

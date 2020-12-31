@@ -1,24 +1,18 @@
-// miniprogram/pages/item/item.js
+// miniprogram/pages/managementEdit/managementEdit.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    item_id: "",
-    editable: ""
+
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 一个页面只会调用一次，可以在 onLoad 中获取打开当前页面所调用的 query 参数
-    this.setData({
-      item_id: options.item_id,
-      editable: options.editable
-    });
-    console.log('[DEBUG]: ');
-    console.log(this.data);
+
   },
 
   /**
@@ -60,7 +54,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    this.selectComponent("#item-list").nextPage();
   },
 
   /**

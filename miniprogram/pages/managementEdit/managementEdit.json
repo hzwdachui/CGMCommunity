@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "itemEdit": "/components/itemEdit/itemEdit",
+    "itemList": "/components/itemList/itemList"
+  },
+  "navigationBarTitleText": "编辑"
+}

@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "item": "/components/item/item"
+    "item": "/components/item/item",
+    "itemEdit": "/components/itemEdit/itemEdit"
   },
   "navigationBarTitleText": "详情"
 }

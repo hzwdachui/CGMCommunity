@@ -1,0 +1,15 @@
+<!--miniprogram/pages/managementHome/managementHome.wxml-->
+<view>
+    <!-- 添加 -->
+    <view class="uploader">
+    <navigator url="../management/management" open-type="navigate" class="uploader-text">
+      <text>添加</text>
+    </navigator>
+  </view>
+  <!-- 修改 -->
+  <view class="uploader">
+    <navigator url="../managementEdit/managementEdit" open-type="navigate" class="uploader-text">
+      <text>修改</text>
+    </navigator>
+  </view>
+</view>

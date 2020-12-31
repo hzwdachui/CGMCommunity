@@ -4,7 +4,8 @@ const DB = wx.cloud.database()
 Component({
   lifetimes: {
     attached: function () {
-      // this.getItem();
+      // 此时还没读取properties
+      console.log("[DEBUG] load item");
       setTimeout(() => {
         this.getItem();
       });

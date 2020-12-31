@@ -67,7 +67,7 @@ Component({
       // 跳转回 index
       // 关闭当前页面，跳转到应用内的某个页面。
       wx.redirectTo({
-        url: '/pages/index/index'
+        url: '/pages/managementHome/managementHome'
       })
     },
     handleNameInput: function (e) {

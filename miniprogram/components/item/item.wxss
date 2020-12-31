@@ -1,2 +1,8 @@
 /* components/item/item.wxss */
 @import '/style/weui.wxss';
+
+.img-center {
+  display: flex;
+  justify-content: center;
+  /** flex 属性， 水平居中**/
+}

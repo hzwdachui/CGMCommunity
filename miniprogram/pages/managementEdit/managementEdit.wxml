@@ -1,0 +1,4 @@
+<!--miniprogram/pages/managementEdit/managementEdit.wxml-->
+<view>
+  <itemList editable="true" id="item-list"></itemList>
+</view>

@@ -7,6 +7,7 @@ const DB = wx.cloud.database();
 Component({
   lifetimes: {
     attached: function () {
+      console.log("[DEBUG]: load comments component");
       setTimeout(() => {
         this.getComments();
       });
@@ -38,6 +39,7 @@ Component({
    */
   methods: {
     async getComments() {
+      console.log('[DEbug] 读取comment');
       let that = this;
       let initData = await DB.collection("comments")
         .where({ item_id: that.properties.item_id })

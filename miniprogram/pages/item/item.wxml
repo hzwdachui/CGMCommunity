@@ -1,4 +1,12 @@
 <!--miniprogram/pages/item/item.wxml-->
 <view>
-  <item item_id="{{item_id}}"></item>
+  <!-- editable设置成string比较方便 -->
+  <block wx:if="{{editable === 'false'}}">
+    <item item_id="{{item_id}}"></item>
+  </block>
+  <block wx:if="{{editable === 'true'}}">
+    <itemEdit item_id="{{item_id}}"></itemEdit>
+  </block>
+  <!-- 这里记录记录一个特别傻逼的wx的坑：wx:if 会先判断data里面的默认值，然后再是onload()方法，然后再渲染
+  所以这里如果 data里面初始 editable 是 'false'，那么<item></item> 会被加载，但是不会被渲染 -->
 </view>

@@ -7,6 +7,10 @@ v0.0.3
   - 所有商品 itemList
   - 点击某个商品展示细节（name，img，ingredients，comments），同时能添加comment
 
+v1.0.2
+- 分页，后端搜索
+- 评论过滤
+
 # TODO
 v0.0.4
 - 提交成功弹出banner
@@ -21,5 +25,8 @@ v0.0.5
 
 # DONE
 20201008: v0.0.3
+20201108: v1.0.2
+
+
 
 

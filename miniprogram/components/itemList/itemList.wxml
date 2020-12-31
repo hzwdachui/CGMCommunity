@@ -3,11 +3,11 @@
   <view class="page__bd">
     <mp-searchbar search="{{search}}" bindclear="clearHandler" cancel="{{false}}"></mp-searchbar>
   </view>
-  
-  <mp-cells wx:for="{{showItemList}}"> 
-    <mp-cell link url="/pages/item/item?item_id={{item._id}}" value="{{item.item_name}}" item_id="{{item._id}}">
-      <image slot="icon" src="{{item.img_src}}" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
-      <!-- <image src="{{item.img_src}}"/> -->
+
+  <mp-cells wx:for="{{showItemList}}">
+    <mp-cell link url="/pages/item/item?item_id={{item._id}}&editable={{editable}}" value="{{item.item_name}}" item_id="{{item._id}}">
+      <image slot="icon" src="{{item.img_src}}"
+        style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
     </mp-cell>
   </mp-cells>
 </view>
